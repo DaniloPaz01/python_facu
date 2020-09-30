@@ -406,12 +406,12 @@ def puntos_de_palabra(dificultad, no_disponibles, puntos):
     int_green = green.intersection(set(no_disponibles))
     int_blue = blue.intersection(set(no_disponibles))
 
-    puntos = reduce(lambda acumulador, i: acumulador-random.randint(0, 10), int_green, puntos) 
-    puntos = reduce(lambda acumulador, i: acumulador//2 , int_blue, puntos) 
+    puntos = reduce(lambda acumulador, i: acumulador-random.randint(0, 10), int_green, puntos)
+    puntos = reduce(lambda acumulador, i: acumulador//2 , int_blue, puntos)
 
     return puntos
 
-          
+
 
 def vertical(pos_actual, pos_anterior):
 
@@ -447,5 +447,5 @@ def analizar_ganador(puntos_jugador_total, puntos_npc_total, nombre, dificult):
     elif puntos_jugador_total == puntos_npc_total:
         sg.Popup('¡Hubo un empate!')
     else:
-        sg.Popup('¡YOU DIED!,GIT GUD M8')
+        sg.Popup('¡Perdiste!')
     sys.exit()
