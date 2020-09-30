@@ -447,5 +447,5 @@ def analizar_ganador(puntos_jugador_total, puntos_npc_total, nombre, dificult):
     elif puntos_jugador_total == puntos_npc_total:
         sg.Popup('¡Hubo un empate!')
     else:
-        sg.Popup('¡Perdiste!')
+        sg.Popup('¡Perdistes!')
     sys.exit()
